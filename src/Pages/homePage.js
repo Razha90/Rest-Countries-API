@@ -14,6 +14,7 @@ function HomePage({
         document.querySelector('input').style.color = textColor;
         } , [background]);
 
+    const notFound = data.length === 0;
     return (
         <div className='homeContainer'>
                   {
@@ -22,6 +23,10 @@ function HomePage({
                       selection={selection}
                       modeBackground={modeBackground}
                       />)
+                  }
+                  {
+                    notFound &&
+                    <h1 style={{opacity:'0.5'}}>Not Found Country 404</h1>
                   }
         </div>
     )
