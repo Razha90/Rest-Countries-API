@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+  --size-normal: 1.2vw;
+  --size-big: 1.5vw;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 7%;
+  width: 86%;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 800;
+  height: 80px;
+  box-shadow: 0 0 5px -2px hsl(207, 26%, 17%);
+  transition: 0.5s;
+}
+.header div:nth-child(2) {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.header div:nth-child(2):hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.header img {
+  width: 15px;
+  margin-right: 10px;
+}
+
+.VeryDarkBlue {
+  background-color: hsl(209, 23%, 22%) ;
+}
+
+.VeryLightGray {
+  background-color: hsl(0, 0%, 100%) ;
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  gap:53px;
+  flex-wrap: wrap;
+  padding: 0 7%;
+  width: 86%;
+  justify-content: center;
+}
+
+
+.container {
+  width: 250px;
+  font-size: 14px;
+  border-radius: 7px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  transition: .5s all;
+  box-shadow: 0 0 5px -2px hsl(207, 26%, 17%);
+}
+
+.container:hover {
+  transform:translate(0 , -25px);
+}
+
+.container-img img {
+  width: 100%;
+  height: 150px;
+  background-color: transparent;
+}
+
+.container-txt {
+  padding: 20px 20px 30px 20px;
+  font-weight: 600;
+}
+
+.container-txt div:nth-child(1) {
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.container-txt span {
+  font-weight: 300;
+}
+
+.seacrh {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 7%;
+  width: 86%;
+  margin: 50px 0;
+}
+
+.search-input {
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  height: 55px;
+  padding-left: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px -2px hsl(207, 26%, 17%);
+  transition: 0.5s;
+}
+.search-input input {
+  width: 100%;
+  height: 98%;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 0 5px -2px hsl(207, 26%, 17%);
+  transition: 0.5s;
+}
+
+.search-input img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.search-input:hover img{
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+input:focus {
+  outline: none;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.region {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.region-box {
+  padding: 0 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: 0 0 5px -2px hsl(207, 26%, 17%);
+}
+
+.region-box:hover {
+  opacity: 0.5;
+  transition:0.5s;
+}
+.region-box:active {
+  color: aqua;
+}
+
+.region-box p:nth-child(2){
+  transform: rotate(90deg);
+}
+
+.region-choose {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 0;
+  overflow: hidden;
+  width: 195px;
+  position:absolute;
+  top: 180px;
+  z-index: 20;
+  box-shadow: 0 0 5px -2px hsl(207, 26%, 17%);
+}
+
+.region-choose div {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.region-choose div:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.region-choose div:active {
+  color: aqua;
+}
+
+.region-choose div:nth-child(1) {
+  margin-top: 20px;
+}
+.region-choose div:nth-child(6) {
+  margin-bottom: 20px;
+}
+
+.babi1 {
+  height: auto;
+  animation: slider ease-in-out 1s;
+}
+
+@keyframes slider {
+  from {
+    height: 0;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+.back-button img {
+  width: 25px;
+  height: 25px;
+}
+
+a {text-decoration: none;}
+.back-button div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 12vw;
+  border-radius: 5px;
+  margin: 70px 0;
+  gap: 15px;
+  padding: 0 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px -2px hsl(207, 26%, 17%);
+  transition: 0.5s;
+  font-size: 1.5vw;
+}
+
+.back-button div:hover, .detailPage-borders div:hover{
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.back-button div:active, .detailPage-borders div:active {
+  background-color: aqua;
+}
+
+.container-detail {
+  width: 86%;
+  padding: 0 7%;
+  font-size: var(--size-big);
+}
+
+.detailPage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10%;
+}
+
+.detailPage img {
+  width: 100%;
+}
+
+.detailPage-judul {
+  font-size: 2vw;
+  font-weight: 800;
+  margin-top: 2vw;
+}
+
+.detailPage-txt {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-top: 2vw;
+  font-size: 1.3vw;
+}
+
+.detailPage-txt span {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+
+.detailPage-borders {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 600;
+  gap: 10px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  font-size: 1.3vw;
+}
+
+.detailPage-borders div {
+  transition: 0.5s;
+  padding: 0.5vw 1.3vw;
+  font-weight: 300;
+  border-radius: 0.2vw;
+  cursor: pointer;
+  box-shadow: 0 0 5px -2px hsl(207, 26%, 17%);
+}
+
+@media screen and (max-width: 670px) {
+  .seacrh {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .search-input {
+    width: 86%;
+    padding: 0 7%;
+  }
+
+  .region-box {
+    width: 140px;
+    gap: 30px;
+  }
+
+  .region-choose {
+    width: 173px;
+    top: 245px;
+  }
+
+}

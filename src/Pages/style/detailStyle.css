@@ -1,0 +1,50 @@
+.detailPage-1 {
+    flex: 40%;
+}
+
+@media screen and (max-width:768px) {
+    .detailPage {
+        flex-direction: column;
+    }
+
+    .detailPage-1 {
+        flex: 100%;
+    }
+
+    .detailPage-txt {
+        font-size: 2vw;
+      }
+
+    .detailPage-borders {
+        font-size: 2vw;
+    }
+
+    .back-button div{
+        font-size: 2vw;
+        margin: 20px 0;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .detailPage-txt {
+        font-size: 3vw;
+        flex-direction: column;
+        gap: 13px;
+      }
+    
+    .detailPage-judul {
+        font-size: 4vw;
+    }
+
+    .detailPage-borders {
+        font-size: 3vw;
+    }
+
+    .back-button div{
+        font-size: 3vw;
+        margin: 10px 0;
+    }
+
+
+}
