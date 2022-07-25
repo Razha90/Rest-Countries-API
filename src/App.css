@@ -16,7 +16,7 @@ body {
   padding: 0 7%;
   width: 86%;
   align-items: center;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 800;
   height: 80px;
   box-shadow: 0 0 5px -2px hsl(207, 26%, 17%);
@@ -334,4 +334,16 @@ a {text-decoration: none;}
     top: 245px;
   }
 
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    font-size: 14px;
+  }
 }
