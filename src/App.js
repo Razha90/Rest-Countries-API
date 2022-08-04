@@ -21,7 +21,6 @@ function App() {
   const textColor = background === true ?'hsl(0, 0%, 100%)' :'hsl(200, 15%, 8%)';
   const modeBackground = background === true ? 'VeryDarkBlue' : 'VeryLightGray';
   const glasses = background === true ? glass : glassBlack;
-  let filterRegion = document.getElementsByClassName('region-choose')[0];
 
 
   function searchText(value) {
@@ -42,16 +41,16 @@ function App() {
       <Router>
       <div className={`header ${modeBackground}`}>
         <div>Where in the world?</div>
-        <div onClick={() => background === true ? setBackGround(false) : setBackGround(true)} className='select-none'><img src={background === true ? moon : sun}/> <span>{background === true ? 'Dark' : 'Light'}</span> <span>Mode</span></div>
+        <div onClick={() => background === true ? setBackGround(false) : setBackGround(true)} className='select-none'><img src={background === true ? moon : sun} alt='SUN or MOON'/> <span>{background === true ? 'Dark' : 'Light'}</span> <span>Mode</span></div>
       </div>
         <Routes>
           
             <Route exact path='/' element={
                 <>
                   <div className='seacrh'>
-                    <div className={`${modeBackground} search-input`}><img src={glasses}/> <input type='text' onChange={(e) => setData(searchText(e.target.value.toLowerCase()))} className={`${modeBackground}`} placeholder='Search for a country..'/></div>
+                    <div className={`${modeBackground} search-input`}><img src={glasses}alt='Glasses'/> <input type='text' onChange={(e) => setData(searchText(e.target.value.toLowerCase()))} className={`${modeBackground}`} placeholder='Search for a country..'/></div>
                     <div className='region select-none'>
-                      <div className={`${modeBackground} region-box`} onClick={() => filterRegion.classList.toggle('babi1')}><p>Filter by Region </p> <p>&#187;</p></div>
+                      <div className={`${modeBackground} region-box`} onClick={() => document.getElementsByClassName('region-choose')[0].classList.toggle('babi1')}><p>Filter by Region </p> <p>&#187;</p></div>
                       <div className={`${modeBackground} region-choose`}>
                         <div onClick={() => setData(africaFilter('africa'))}>Africa</div>
                         <div onClick={() => setData(africaFilter('america'))}>America</div>
